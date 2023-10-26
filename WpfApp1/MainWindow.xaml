@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="418" Width="648" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+    <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="637"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="text1" HorizontalAlignment="Left" Margin="71,93,0,0" TextWrapping="Wrap" Text="Input Excel file" VerticalAlignment="Top" Width="109"/>
+        <TextBox x:Name="inputText" Height="34" Margin="71,114,0,0" TextWrapping="Wrap" Text="Input file path here ..." VerticalAlignment="Top" HorizontalAlignment="Left" Width="419" FontStyle="Italic"/>
+        <TextBlock x:Name="text2" HorizontalAlignment="Left" Margin="71,191,0,0" TextWrapping="Wrap" Text="Output path" VerticalAlignment="Top" Width="109"/>
+        <TextBox x:Name="outputText" HorizontalAlignment="Left" Height="35" Margin="71,208,0,0" TextWrapping="Wrap" Text="Output folder path here ..." VerticalAlignment="Top" Width="419" FontStyle="Italic"/>
+        <Slider x:Name="slider" Margin="71,291,110,0" VerticalAlignment="Top" Maximum="200" ValueChanged="onSliderChanged" Value="50" SmallChange="1" LargeChange="10" Height="29" IsSnapToTickEnabled="True">
+            <UIElement.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </UIElement.RenderTransform>
+        </Slider>
+        <TextBlock x:Name="sliderVal" HorizontalAlignment="Left" Margin="548,291,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Height="17" Width="34"/>
+        <Button x:Name="inButton" Content="Select from ..." HorizontalAlignment="Left" Margin="510,114,0,0" VerticalAlignment="Top" Height="34" Width="77" Click="inButton_Click"/>
+        <Button x:Name="exButton" Content="Export to ..." Margin="510,208,50,0" VerticalAlignment="Top" Height="34" Click="exButton_Click"/>
+        <Button x:Name="runButton" Content="RUN" Margin="456,337,37,0" VerticalAlignment="Top" Height="32" Click="runButton_Click"/>
+        <TextBlock x:Name="debug" HorizontalAlignment="Left" Margin="76,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="44" Width="414"/>
+
+    </Grid>
+</Window>
